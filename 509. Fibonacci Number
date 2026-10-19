@@ -1,0 +1,8 @@
+# Self is written kyuki ham cls ke andar hi bnaye gye method ko cls ke andar hi access krre he without creating object.
+
+class Solution:
+    def fib(self, n: int) -> int:
+        if n == 0 or n == 1 :
+            return n
+        else :
+            return self.fib(n-1) + self.fib(n-2)
