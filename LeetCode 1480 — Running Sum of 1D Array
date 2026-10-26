@@ -3,3 +3,15 @@ class Solution:
         for i in range(1, len(nums)):
             nums[i] += nums[i - 1]
         return nums
+
+
+### This is the 2nd approach and i will solve by this . as it is work on the logic that we knnow in the running sum of array the basic concept is 
+#### in each ele its prev total is added . so what we did is that first append the first ele in our ans then  we calculated x and added it in our ans/result
+    #     ans = []
+    #     ans.append[nums[0]]
+
+    #     for i in range(1,n+1):
+    #         x = ans[i-1] + nums[i]
+    #         ans.append(x)
+
+    # return ans
