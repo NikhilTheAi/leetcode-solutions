@@ -1,0 +1,13 @@
+## Logic provided by codeanddebug its good . find the min price first and then calculate our maxiProffy
+
+class Solution:
+    def maxProfit(self, prices: list[int]) -> int:
+        n = len(prices)
+        min_price = float("inf")
+        maxiProffy = 0
+
+        for i in range(n):
+            min_price = min(min_price,prices[i])
+            maxiProffy = max(maxiProffy,prices[i] - min_price)
+        
+        return maxiProffy
