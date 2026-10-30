@@ -1,0 +1,22 @@
+## Logic : Calculate left Sum and rightSum if they are equal return the index 
+## elsee return -1
+
+class Solution:
+    def pivotIndex(self, nums: list[int]) -> int:
+        rightSum = 0 
+        leftSum = 0
+        n = len(nums)
+
+        for num in nums:
+            rightSum+=num
+        
+        for i in range(n):
+            rightSum -= nums[i]
+
+            if rightSum == leftSum:
+                return i
+            
+            leftSum += nums[i]
+        
+        return -1
+        
