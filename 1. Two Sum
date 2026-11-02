@@ -1,0 +1,12 @@
+# Brute Force  ## by Sorting ### optimal by hashmap
+
+class Solution:
+    def twoSum(self, nums: list[int], target: int) -> list[int]:
+        n = len(nums)
+        hash_map = {}
+
+        for i in range(n):
+            remain = target - nums[i]
+            if remain in hash_map:
+                return [hash_map[remain],i]
+            hash_map[nums[i]] = i
